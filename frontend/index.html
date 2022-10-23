@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personas Renaper</title>
+   
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./frameworks/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--vinculaicon css-->
+
+</head>
+
+<body>
+
+    <div class="" id="contenedorNav">
+        <nav class="navbar navbar-expand-lg navbar-light" id="navegador">
+
+            <img src="./imagenes/logo_argentina-blanco.svg " alt="logo_argentina-blanco" height="50" width="254">
+
+
+            <div class="container" id="cajaBotones">
+
+                <input class="form-control" type="text" placeholder="Buscar Personas Renaper" id="Nombre">
+
+                <button onclick="getData();" class="btn float-end"><i class="fa fa-search" aria-hidden="true">
+                    </i></button>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container-fluid col-12 bg-dark" id="contenedorListas">
+        <ol>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Ministerio del Interior</a></li>
+            <li><a href="#">Renaper</a></li>
+        </ol>
+
+        <div class="dropdown" id="botonInstitucional">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Institucional
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Institucional</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="#">Consejo Federal</a></li>
+             
+            </ul>
+          </div>
+
+    </div>
+
+    
+<div class="container-fluid">
+
+    <img src="./imagenes/renaper.png" alt="" class="img-fluid">
+
+</div>
+   
+
+
+<div class="container-fluid" id="contenedorIconos">
+
+    <ul>
+
+        <li>
+            <a href="#"><img src="./imagenes/icons8-calendario-más-40.png" alt="iconoFecha">
+                
+            </a>
+          <p>Turnos Online</p>
+        </li>
+
+         <li>
+            <a href="">
+                <img src="./imagenes/icons8-hoy-40.png" alt="">
+            </a>
+            <p>Abona tu DNIy/o <br> Pasaporte</p>
+        </li>
+
+        <li>
+            
+            <a href="#">
+                <img src="./imagenes/icons8-búsqueda-40.png" alt=""> 
+            </a>
+            <p>Segui tu tramite</p>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="./imagenes/icons8-tarjeta-de-identificación-40.png" alt="">
+                
+            </a> 
+           <p>Consulta tu ejemplar <br> vigente DNI</p>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="./imagenes/icons8-código-qr.gif" alt="">
+               
+            </a>
+            <p>Verificar la validez de tu DNI <br> en el celular</p>
+        </li>
+    
+    </ul>
+
+</div>
+
+            <div class="container-fluid pt-5">
+                <button class="btn btn-success float-end" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                        aria-hidden="true">PROXIMAMENTE</i></button>
+            </div>
+        
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Nombre:</label>
+                                <input class="form-control" type="text" id="Nuevo_Nombre">
+                            </div>
+                            <div class="col">
+                                <label for="">Apellido:</label>
+                                <input class="form-control" type="text" id="Apellido">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Telefono:</label>
+                                <input class="form-control" type="text" id="Telefono">
+                            </div>
+                            <div class="col">
+                                <label for="">Dni:</label>
+                                <input class="form-control" type="text" id="Dni">
+                            </div>
+                            <div class="col">
+                                <label for="Email">Email:</label>
+                                <input class="form-control" type="email" id="Email" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button onclick="saveData();" type="button" class="btn btn-primary">Cuardar Cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--FIN MODAL PROXIMAMENTE-->
+
+        <table class="table">
+            <thead>
+                <th>NUMERO DE REGISTRO</th>
+                <th>NOMBRE</th>
+                <th>APELLIDO</th>
+                <th>DNI</th>
+                <th>NUMERO DE TRAMITE</th>
+                <th>NACIONALIDAD</th>
+                <th></th>
+            </thead>
+            <tbody id="grdDatos"></tbody>
+        </table>
+    </div>
+
+
+    <script src="./controllers/index.controllers.js"></script>
+    <script src="./controllers/app.js"></script>
+    <script src="./controllers/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>

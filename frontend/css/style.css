@@ -1,0 +1,114 @@
+*{
+                        /* reinicio html */
+    padding: 0;
+    margin: 0;
+}
+
+#contenedorNav{
+
+width: 100%;
+
+background-color: #37bbed;
+
+}
+
+#cajaBotones{ /*CENTRO LOS BOTONES*/
+
+justify-content: center;
+
+
+}
+
+
+#Nombre{   /* ancho del input*/
+
+width: 500px;
+
+}
+
+#navegador{
+
+
+}
+
+#navegador a img {
+
+    height: 100px;
+    width: auto;
+}
+
+#contenedorListas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+   
+}
+
+#contenedorListas ol{
+display: flex;
+}
+
+
+#contenedorListas ol li {
+padding-left: 10px;
+padding-top: 10px;
+
+}
+
+
+#contenedorListas ol li a {
+text-decoration: none;
+color: whitesmoke;
+
+
+}
+
+
+#botonInstitucional button{
+
+    color: whitesmoke
+}
+
+
+#contenedorIconos{
+    background-color: rgba(102, 102, 102, 0.13);
+    padding: 20px 0;
+    text-align: center;
+    
+   
+
+}
+
+#contenedorIconos ul{
+
+                    display: flex;
+                    justify-content: space-around;
+                   
+                   
+                
+}
+#contenedorIconos ul li{
+
+    display: inline-block;
+    vertical-align: top;
+    
+
+
+}
+
+#contenedorIconos ul li a{
+
+                        text-decoration: none;              
+
+}
+
+#contenedorIconos ul li a img {
+
+                            height: 40px;
+
+}
+
+
+
+
+

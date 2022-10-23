@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<li> 
+    <a class="list-group-item navbar-custom text-white" data-bs-toggle="collapse" href="#id1" aria-expanded="false">Acciones de Caja</a>
+    <ul id="id1" class="list-group collapse multi-collapse">
+        <li class="list-group-item jli"><i class="fa fa-plus"></i>&nbsp;Inicio</li>
+        <li class="list-group-item jli"><i class="fa fa-sign-in"></i>&nbsp;Apertura</li>
+        <li class="list-group-item jli"><i class="fa fa-usd"></i>&nbsp;Solicitar Dinero</li>
+        <li class="list-group-item jli"><i class="fa fa-usd"></i>&nbsp;Enviar Dinero</li>
+        <li class="list-group-item jli"><i class="fa fa-inbox"></i>&nbsp;Buzon</li>
+        <li class="list-group-item jli"><i class="fa fa-sign-in"></i>&nbsp;Cuadre y Cierre</li>
+        <li class="list-group-item jli"><i class="fa fa-plus"></i>&nbsp;Fin</li>
+    </ul>
+</li>
